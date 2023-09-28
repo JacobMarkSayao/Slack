@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header {
+    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: 0.5s ease;
+  }
+  /* HEADER */
+  .container {
+    @apply max-w-[80rem] w-full p-5 mx-auto
+    lg:p-0;
+  }
+  .header {
+    @apply lg:flex lg:flex-row lg:justify-between lg:items-center lg:py-5 lg:mt-0;
+  }
+  .header img {
+    @apply lg:w-[7rem] lg:h-[2.5rem] lg:pt-2 lg:items-center;
+  }
+  .header__wrapper {
+    @apply lg:flex lg:flex-row;
+  }
+  .header__middle {
+    @apply lg:flex;
+  }
+  
+  .header__nav {
+    @apply lg:flex lg:flex-row items-center justify-center lg:gap-10 pl-5 text-white ;
+  }
+  .header__right ul {
+    @apply lg:flex pl-10 lg:gap-[2rem];
+  }
+  .header__right {
+    @apply lg:text-white lg:items-center lg:justify-center;
+  }
+  .header__right i {
+    @apply lg:pl-[10rem] lg:pr-4 lg:pt-4;
+  }
+  .header__right {
+    @apply lg:flex;
+  }
+}
+
+.header.white {
+  @apply  lg:bg-transparent lg:ease-in-out lg:duration-500 lg:flex mt-7 lg:items-center lg:justify-center lg:rounded-[5rem];
+}
+.header.white .container {
+  @apply bg-white lg:ease-in-out rounded-full p-5;
+}
+
+.header__middle .logo__black {
+    @apply lg:absolute lg:pt-0 lg:hidden
+  }
+  .header.white .logo__black {
+    @apply lg:absolute lg:pt-0 lg:block mt-[.2rem]
+  }
+  .header.white .logo__white {
+    @apply lg:hidden
+  }
+
+@layer utilities {
+  .btn {
+    @apply inline-block px-5 py-3 border-[1px] rounded-[.2rem];
+  }
+  .btn.bg--violet {
+    @apply bg-violet text-white;
+  }
+  .btn.bg--white {
+    @apply bg-white text-violet;
+  }
+}
